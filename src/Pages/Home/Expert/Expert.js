@@ -1,23 +1,23 @@
 import React from 'react';
-import expert1 from '../../../images/experts/expert-1.jpg';
-import expert2 from '../../../images/experts/expert-2.jpg';
-import expert3 from '../../../images/experts/expert-3.jpg';
-import expert4 from '../../../images/experts/expert-4.jpg';
-import expert5 from '../../../images/experts/expert-5.jpg';
-import expert6 from '../../../images/experts/expert-6.jpg';
-const expert = [
-    {id: 1, name: 'will smith', img: expert1 },
-    {id: 2, name: 'Dwayne Rock', img: expert2 },
-    {id: 3, name: 'Messy vai', img: expert3 },
-    {id: 4, name: 'Ronaldo bro', img: expert4 },
-    {id: 5, name: 'Stachy jhonson', img: expert5 },
-    {id: 6, name: 'limko tera', img: expert6 },
-]
-const Expert = () => {
+
+const Expert = ({ expert }) => {
+    const { name, img } = expert;
     return (
-        <div>
-            <h2>Our Expert</h2>
+      <div class="card g-5 col-sm-12 col-md-6 col-lg-4">
+        <div style={{ width: "18rem" }}>
+          <img src={img} class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{name}</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
+            <a href="#" class="btn btn-primary">
+              Go somewhere
+            </a>
+          </div>
         </div>
+      </div>
     );
 };
 
